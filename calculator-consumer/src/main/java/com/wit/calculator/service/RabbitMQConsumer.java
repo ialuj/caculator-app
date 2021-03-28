@@ -3,15 +3,13 @@ package com.wit.calculator.service;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
 import com.wit.calculator.exception.CalculatorConsumerException;
 import com.wit.calculator.model.dto.OperandsDTO;
 import com.wit.calculator.model.service.ICalculatorService;
 
-@Component
 public class RabbitMQConsumer implements IRabbitMQConsumer {
-
+	
 	@Value("${calculator.rabbitmq.queue}")
 	private String queue;
 
@@ -23,7 +21,7 @@ public class RabbitMQConsumer implements IRabbitMQConsumer {
 
 	@Autowired
 	private ICalculatorService calculatorService;
-
+	
 	@Override
 	@RabbitListener(queues = "${calculator.rabbitmq.queue}")
 	public OperandsDTO receivedMessage(OperandsDTO operandsDTO) {
@@ -48,4 +46,5 @@ public class RabbitMQConsumer implements IRabbitMQConsumer {
 			throw new CalculatorConsumerException(exception.getMessage());
 		}
 	}
+
 }

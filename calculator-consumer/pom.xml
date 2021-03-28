@@ -11,9 +11,6 @@
 	
 	<artifactId>calculator-consumer</artifactId>
 	
-	<name>calculator-consumer</name>
-	<description>A Simple Consumer for the calculator API</description>
-	
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -47,6 +44,12 @@
 			<groupId>org.springframework.amqp</groupId>
 			<artifactId>spring-rabbit-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.wit.restjavachallenge</groupId>
+			<artifactId>calculator-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
 	</dependencies>

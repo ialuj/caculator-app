@@ -53,6 +53,12 @@
 			<version>2.11.0</version>
 			<scope>compile</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.wit.restjavachallenge</groupId>
+			<artifactId>calculator-publisher</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 
 	</dependencies>
 

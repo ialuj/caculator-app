@@ -6,14 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.wit.calculator.model.dto.OperandsDTO;
 import com.wit.calculator.service.IRabbitMQSender;
 
-@RestController
-@RequestMapping("api/v1/calculator")
 public class CalculatorWS implements ICalculatorWS {
 	
 	@Autowired
@@ -80,4 +76,5 @@ public class CalculatorWS implements ICalculatorWS {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
 		}
 	}
+
 }
