@@ -3,11 +3,13 @@ package com.wit.calculator.service;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import com.wit.calculator.exception.CalculatorConsumerException;
 import com.wit.calculator.model.dto.OperandsDTO;
 import com.wit.calculator.model.service.ICalculatorService;
 
+@Component
 public class RabbitMQConsumer implements IRabbitMQConsumer {
 	
 	@Value("${calculator.rabbitmq.queue}")
