@@ -8,8 +8,9 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>calculator-publisher</artifactId>
-	<name>calculator-publisher-api</name>
+	<name>calculator-publisher</name>
 	<description>A Simple Publisher for the calculator API</description>
+	
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
