@@ -24,13 +24,6 @@
 			<scope>test</scope>
 		</dependency>
 		
-		<!-- Calculator Consumer -->
-		<!-- <dependency>
-			<groupId>com.wit.restjavachallenge</groupId>
-			<artifactId>calculator-consumer</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency> -->
-		
 	</dependencies>
 
 	<build>

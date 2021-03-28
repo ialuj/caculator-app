@@ -43,14 +43,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- For Mocks -->
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
-			<version>2.11.0</version>
-			<scope>compile</scope>
-		</dependency>
-
 		<!-- Calculator Publisher -->
 		<dependency>
 			<groupId>com.wit.restjavachallenge</groupId>
@@ -58,11 +50,12 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
-		<!-- Calculator Consumer -->
+		<!-- For Mocks -->
 		<dependency>
-			<groupId>com.wit.restjavachallenge</groupId>
-			<artifactId>calculator-consumer</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>2.11.0</version>
+			<scope>compile</scope>
 		</dependency>
 
 	</dependencies>
