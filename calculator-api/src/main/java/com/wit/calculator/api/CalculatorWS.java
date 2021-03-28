@@ -15,7 +15,7 @@ import com.wit.calculator.service.IRabbitMQSender;
 @RestController
 @RequestMapping("api/v1/calculator")
 public class CalculatorWS implements ICalculatorWS {
-
+	
 	@Autowired
 	private IRabbitMQSender rabbitMQSender;
 
@@ -80,5 +80,4 @@ public class CalculatorWS implements ICalculatorWS {
 			return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
 		}
 	}
-
 }

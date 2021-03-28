@@ -1,0 +1,6 @@
+com\wit\calculator\service\RabbitMQConsumer.class
+com\wit\calculator\config\RabbitMQConfig.class
+com\wit\calculator\model\dto\OperandsDTO.class
+com\wit\calculator\service\IRabbitMQConsumer.class
+com\wit\calculator\exception\CalculatorConsumerException.class
+com\wit\calculator\CalculatorConsumerApplication.class

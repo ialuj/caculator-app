@@ -1,0 +1,6 @@
+C:\LAB_SPRING\2ibi_springboot\calculator-app\calculator-publisher\src\main\java\com\wit\calculator\controller\RabbitMQWebController.java
+C:\LAB_SPRING\2ibi_springboot\calculator-app\calculator-publisher\src\main\java\com\wit\calculator\CalculatorPublisherApplication.java
+C:\LAB_SPRING\2ibi_springboot\calculator-app\calculator-publisher\src\main\java\com\wit\calculator\config\RabbitMQConfig.java
+C:\LAB_SPRING\2ibi_springboot\calculator-app\calculator-publisher\src\main\java\com\wit\calculator\model\dto\OperandsDTO.java
+C:\LAB_SPRING\2ibi_springboot\calculator-app\calculator-publisher\src\main\java\com\wit\calculator\service\IRabbitMQSender.java
+C:\LAB_SPRING\2ibi_springboot\calculator-app\calculator-publisher\src\main\java\com\wit\calculator\service\RabbitMQSender.java

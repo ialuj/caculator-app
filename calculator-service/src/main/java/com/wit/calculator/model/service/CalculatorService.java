@@ -1,6 +1,7 @@
 package com.wit.calculator.model.service;
 
 import java.math.BigDecimal;
+import java.math.MathContext;
 
 import org.springframework.stereotype.Service;
 
@@ -49,7 +50,7 @@ public class CalculatorService implements ICalculatorService {
 			throw new BusinessException("O divisor nao pode ter valor ZERO!");
 		}
 
-		BigDecimal result = firstOperand.divide(secondOperand);
+		BigDecimal result = firstOperand.divide(secondOperand, MathContext.DECIMAL128);
 		return result;
 	}
 

@@ -1,10 +1,8 @@
 package com.wit.calculator.service;
 
-import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Component;
 
 import com.wit.calculator.exception.CalculatorConsumerException;
@@ -25,13 +23,11 @@ public class RabbitMQConsumer implements IRabbitMQConsumer {
 
 	@Autowired
 	private ICalculatorService calculatorService;
-	
-	@Autowired
-	private AmqpTemplate rabbitTemplate;
-	
+
 	@Override
 	@RabbitListener(queues = "${calculator.rabbitmq.queue}")
-	public void receivedMessage(OperandsDTO operandsDTO) {
+	public OperandsDTO receivedMessage(OperandsDTO operandsDTO) {
+		try {
 		if ("+".equals(operandsDTO.getOperationType())) {
 			operandsDTO.setResult(calculatorService.sum(operandsDTO.getFirstOperand(), operandsDTO.getSecondOperand()));
 		} else if ("-".equals(operandsDTO.getOperationType())) {
@@ -46,6 +42,10 @@ public class RabbitMQConsumer implements IRabbitMQConsumer {
 		} else {
 			throw new CalculatorConsumerException("Operacao nao reconhecida");
 		}
-		rabbitTemplate.convertAndSend(exchange, routingkey, operandsDTO);
+		return operandsDTO;
+		}
+		catch(final Exception exception) {
+			throw new CalculatorConsumerException(exception.getMessage());
+		}
 	}
 }

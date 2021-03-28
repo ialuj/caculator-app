@@ -4,6 +4,6 @@ import com.wit.calculator.model.dto.OperandsDTO;
 
 public interface IRabbitMQConsumer {
 	
-	public void receivedMessage(OperandsDTO operandsDTO);
+	public OperandsDTO receivedMessage(OperandsDTO operandsDTO);
 	
 }
