@@ -8,5 +8,9 @@ public class CalculatorApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CalculatorApiApplication.class, args);
+		
+		// Start Consumer here
+		new CalculatorConsumerApplication();
 	}
+
 }

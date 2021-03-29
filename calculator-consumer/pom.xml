@@ -1,17 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	
-	<parent>
-		<groupId>com.wit.restjavachallenge</groupId>
-		<artifactId>calculator-app</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
-	
-	<artifactId>calculator-consumer</artifactId>
-	
-	<properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.wit.restjavachallenge</groupId>
+    <artifactId>calculator-app</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>calculator-consumer</artifactId>
+  <name>calculator-consumer</name>
+  <description>A Simple Consumer for the calculator API</description>
+  
+  <properties>
 		<java.version>1.8</java.version>
 	</properties>
 
@@ -51,7 +49,7 @@
 			<artifactId>calculator-service</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-
+		
 	</dependencies>
 
 	<build>
@@ -62,5 +60,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
+  
 </project>

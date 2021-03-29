@@ -15,10 +15,11 @@ import com.wit.calculator.service.IRabbitMQSender;
 @RestController
 @RequestMapping("api/v1/calculator")
 public class CalculatorWS implements ICalculatorWS {
-	
+
 	@Autowired
 	private IRabbitMQSender rabbitMQSender;
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	@GetMapping("/sum")
 	public ResponseEntity<BigDecimal> sum(BigDecimal a, BigDecimal b) {
@@ -31,10 +32,12 @@ public class CalculatorWS implements ICalculatorWS {
 
 			return response;
 		} catch (Exception exception) {
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+			ResponseEntity response = ResponseEntity.status(HttpStatus.BAD_REQUEST).body(exception.getMessage());
+			return response;
 		}
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	@GetMapping("/subtract")
 	public ResponseEntity<BigDecimal> subract(BigDecimal a, BigDecimal b) {
@@ -47,10 +50,12 @@ public class CalculatorWS implements ICalculatorWS {
 
 			return response;
 		} catch (Exception exception) {
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+			ResponseEntity response = ResponseEntity.status(HttpStatus.BAD_REQUEST).body(exception.getMessage());
+			return response;
 		}
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	@GetMapping("/multiply")
 	public ResponseEntity<BigDecimal> multiply(BigDecimal a, BigDecimal b) {
@@ -62,10 +67,12 @@ public class CalculatorWS implements ICalculatorWS {
 
 			return response;
 		} catch (Exception exception) {
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+			ResponseEntity response = ResponseEntity.status(HttpStatus.BAD_REQUEST).body(exception.getMessage());
+			return response;
 		}
 	}
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Override
 	@GetMapping("/divide")
 	public ResponseEntity<BigDecimal> divide(BigDecimal a, BigDecimal b) {
@@ -77,7 +84,8 @@ public class CalculatorWS implements ICalculatorWS {
 
 			return response;
 		} catch (Exception exception) {
-			return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+			ResponseEntity response = ResponseEntity.status(HttpStatus.BAD_REQUEST).body(exception.getMessage());
+			return response;
 		}
 	}
 
